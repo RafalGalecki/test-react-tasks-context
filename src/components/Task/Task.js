@@ -1,19 +1,13 @@
 import { MdClose } from 'react-icons/md';
 import css from './Task.module.css';
-import { useDispatch } from 'react-redux';
-import { deleteTask, toggleCompleted } from 'redux/actions';
+import { useTask } from 'contexts/taskContext';
 
 export const Task = ({ task }) => {
-  // Otrzymujemy odnośnik do funkcji wysłania akcji
-  const dispatch = useDispatch();
+  const { deleteTask, toggleCompleted } = useTask();
 
-  // Wywołujemy generator akcji i przekazujemy identyfikator zadania
-  // Wysyłamy wynik – akcję usunięcia zadania
-  const handleDelete = () => dispatch(deleteTask(task.id));
+  const handleDelete = () => deleteTask(task.id);
 
-  // Wywołujemy generator akcji i przekazujemy identyfikator zadania
-  // Wysyłamy wynik – akcję przełączania statusu zadania
-  const handleToggle = () => dispatch(toggleCompleted(task.id));
+  const handleToggle = () => toggleCompleted(task.id);
 
   return (
     <div className={css.wrapper}>
