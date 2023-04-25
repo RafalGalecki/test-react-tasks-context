@@ -1,8 +1,8 @@
 {
-  "name": "react-homework-template",
+  "name": "tasks-context",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://rafalgalecki.github.io/test-react/",
+  "homepage": "https://rafalgalecki.github.io/test-react-tasks-context/",
   "dependencies": {
     "@redux-devtools/extension": "^3.2.5",
     "@reduxjs/toolkit": "^1.9.3",
